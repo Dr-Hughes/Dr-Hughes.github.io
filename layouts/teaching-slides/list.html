@@ -1,39 +1,37 @@
 {{ define "main" }}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-    </h1>
+  <style>:root:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) { --w: 68rem; }</style>
+  <article class="accent-green">
+    <header class="mb-14">
+      <h1 class="my-0! pb-2.5">{{ .Title | markdownify }}</h1>
+    </header>
+    <section>{{ .Content }}</section>
 
-    <div class="post-content">
-      <div>
-        {{ .Content }}
-        <table class="slides-table">
-          <thead>
-            <tr>
-              <th>Preview</th>
-              <th>HTML</th>
-              <th>PDF</th>
-              <th>PPTX</th>
-              <th>Materials</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{ range site.Data.teaching_slides }}
-            <tr>
-              <td>
-                <strong>{{ .title }}</strong>
-                <br />
-                {{ .description }}
-              </td>
-              <td>{{ with .html }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">View (recommended)</a>{{ else }}&mdash;{{ end }}</td>
-              <td>{{ with .pdf }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">Download PDF</a>{{ else }}&mdash;{{ end }}</td>
-              <td>{{ with .pptx }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">Download PPTX</a>{{ else }}&mdash;{{ end }}</td>
-              <td>{{ with .materials }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">materials.zip</a>{{ else }}&mdash;{{ end }}</td>
-            </tr>
-            {{ end }}
-          </tbody>
-        </table>
-      </div>
+    <div class="not-prose resource-table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr>
+            <th>Deck</th>
+            <th>HTML</th>
+            <th>PDF</th>
+            <th>PPTX</th>
+            <th>Materials</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range hugo.Data.teaching_slides }}
+          <tr>
+            <td>
+              <strong>{{ .title }}</strong>
+              <div class="resource-desc">{{ .description }}</div>
+            </td>
+            <td>{{ with .html }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">View</a>{{ else }}&mdash;{{ end }}</td>
+            <td>{{ with .pdf }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">PDF</a>{{ else }}&mdash;{{ end }}</td>
+            <td>{{ with .pptx }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">PPTX</a>{{ else }}&mdash;{{ end }}</td>
+            <td>{{ with .materials }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">materials.zip</a>{{ else }}&mdash;{{ end }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
     </div>
   </article>
 {{ end }}

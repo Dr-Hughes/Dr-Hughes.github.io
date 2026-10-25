@@ -1,39 +1,35 @@
 ---
-title: "About Aoife"
+title: "About"
 meta_title: "About"
-description: "Learn more about Aoife Hughes, researcher, programmer, and gaming enthusiast"
-cover: "/images/me.png"
+description: "About Aoife Hughes: teacher, scientist and all-round nerd"
+accent: "orange"
 draft: false
 ---
 
-Hi! I'm Aoife Hughes, a computational biologist, open source advocate, and passionate science communicator. I bridge the gap between complex scientific research and accessible, interactive experiences. I'm currently doing my PGCE with the aim to teach Maths and Computer Science at schools.
+I'm Aoife, a computational biologist turned teacher. I'm working on my PGCE to become a qualified secondary school teacher of Computer Science and Maths.
 
-## Education & Research
+## Teaching
 
-**Ph.D. in Computational Modelling of Cellular Information Transfer** (2018-2022)  
-*John Innes Centre, England, UK*
+So far my lessons cover Computer Science from Year 7 up to A-level, and Creative iMedia at GCSE. I like building a lesson around a problem the class can get stuck into, such as cracking a vault to learn the fetch-execute cycle, or decoding a hidden message in a photo with Python.
 
-I conducted forefront research on plant cell signalling in a multidisciplinary team, focusing on how molecules navigate cellular structures. My work combined mathematical modeling, simulation development, and data visualization to understand transport phenomena in biological systems. During my PhD, I mentored M.Sc. and undergraduate students and published in prestigious academic journals while championing open-source software projects.
+Everything I make is on the [Teaching page](/teaching/), free to use and modify.
 
-**B.Sc. in Computer Science, First Class Honours** (2014-2018)  
-*Aberystwyth University, Wales, UK*
+## Where I came from
 
-My undergraduate dissertation led to two notable research publications, establishing an early foundation for my research career in computational approaches to biological problems.
+I did a **Ph.D. in Computational Modelling of Cellular Information Transfer** at the John Innes Centre in England (2018 to 2022), working on how molecules move between plant cells. That meant mathematical modelling, simulation and data visualisation, in a team that spanned several disciplines. I mentored M.Sc. and undergraduate students along the way, and published research software as open source.
 
-## Recognition & Awards
+Before that I studied **B.Sc. Computer Science** at Aberystwyth University in Wales (2014 to 2018), graduating with First Class Honours.
 
-I've been fortunate to receive recognition for my work in research and open source contributions:
+Since then I've changed hats a lot: robotic greenhouses, climate change, crop security, patient safety and opioid usage with the NHS, and drug discovery, with scientific outreach whenever I can. My papers are on the [Research page](/research/).
 
-- **Software Sustainability Institute Fellowship** (2023) - Supporting sustainable research software practices
-- **UK Open Source Awards Winner** (2019) - Recognizing contributions to open source software
-- **DigiEduHack Climate Change Contest Finalist** (2022) - For innovative climate education solutions
-- **Genetics Society Research Grant** (2017) - Early career research funding
-- **Fully Funded BBSRC Ph.D. Scholarship** (2018) - Competitive doctoral funding
+## Recognition
 
-## Interests
+- **Software Sustainability Institute Fellowship** (2023)
+- **DigiEduHack Climate Change Contest**, finalist (2022)
+- **UK Open Source Awards**, winner (2019)
+- **BBSRC fully funded Ph.D. scholarship** (2018)
+- **Genetics Society Research Grant** (2017)
 
-Beyond my research work, I'm passionate about:
+## Beyond the classroom
 
-- **Science Communication**: Making complex topics accessible through clear writing and interactive visualizations
-- **Data Visualization**: Creating compelling ways to explore and understand data using tools like Plotly and D3.js
-- **Open Source Software**: Contributing to projects that advance scientific computing and education
+I enjoy science communication, data visualisation (Plotly and D3.js are favourites), open source software and a lot of gaming.

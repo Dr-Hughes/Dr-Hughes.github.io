@@ -2,11 +2,10 @@
 # The base URL of your site. Local file-served convention is "/";
 # the gh-pages workflow overrides this with --baseURL at build time.
 baseURL = "/"
-languageCode = "en-us"
+languageCode = "en-GB"
 title = "Aoife Hughes"
-theme = "terminal"
-copyright = "© 2025 Aoife Hughes. All rights reserved."
-# Default time zone for time stamps
+theme = "hugo-paper"
+copyright = "© 2026 Aoife Hughes"
 timeZone = "Europe/London"
 summaryLength = 10
 enableEmoji = true
@@ -20,28 +19,9 @@ contentDir = "content/english"
 [permalinks.page]
 "pages" = "/:slugorcontentbasename/"
 
-########################## Pagination ############################
-[pagination]
-pagerSize = 10
-
 ############################# Outputs ############################
 [outputs]
 home = ["HTML", "RSS"]
-
-############################# Imaging ############################
-[imaging]
-quality = 80
-resampleFilter = "Lanczos"
-
-############################ Caches ##############################
-[caches]
-[caches.images]
-dir = ":resourceDir/_gen"
-maxAge = "720h"
-
-[caches.assets]
-dir = ":resourceDir/_gen"
-maxAge = "720h"
 
 ############################ Markup ##############################
 [markup]
@@ -49,54 +29,36 @@ maxAge = "720h"
 unsafe = true
 
 [markup.highlight]
-style = 'monokai'
-lineNumbersInTable = false
-
-[markup.tableOfContents]
-startLevel = 2
-endLevel = 5
-ordered = true
+style = 'nord'
+noClasses = false
 
 ########################### Params ###############################
 [params]
-subtitle = "Ph.D. in Computational Biology. Currently doing my PGCE with the aim to teach Maths and Computer Science at schools."
-description = "A place for things I find interesting, from Science to Programming and a lot of Gaming"
+# "light" gives the theme's plain white page background (#fff).
+color = "light"
+description = "Teacher, scientist and all-round nerd. Computer Science and Maths teaching resources, plus research in computational biology."
 author = "Aoife Hughes"
-keywords = ["science", "programming", "gaming", "research"]
-showMenuItems = 5
-menuMore = "Show more"
-readMore = "Read more"
-readOtherPosts = "Read other posts"
-dateFormat = ":date_long"
-fullWidthTheme = false
-centerTheme = false
-
-[params.logo]
-logoText = "Aoife Hughes"
-logoHomeLink = "/"
+name = "Aoife Hughes"
+github = "Dr-Hughes"
+disablePostNavigation = true
 
 ########################### Menus ###############################
 [[menu.main]]
-name = "Home"
-url = "/"
+name = "About"
+url = "/about/"
 weight = 1
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "Teaching"
+url = "/teaching/"
 weight = 2
 
 [[menu.main]]
-name = "Teaching"
-url = "/teaching"
+name = "Research"
+url = "/research/"
 weight = 3
 
 [[menu.main]]
-name = "Research"
-url = "/research"
+name = "Contact"
+url = "/contact/"
 weight = 4
-
-[[menu.main]]
-name = "GitHub"
-url = "https://github.com/AoifeHughes"
-weight = 5

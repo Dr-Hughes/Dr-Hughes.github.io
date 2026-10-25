@@ -2,8 +2,8 @@
 title: "Teaching"
 meta_title: "Teaching"
 description: "Lesson slides and worksheets from Aoife Hughes, by subject, topic and year"
-cover: "/images/me.png"
 type: "teaching-resources"
+accent: "green"
 draft: false
 ---
 

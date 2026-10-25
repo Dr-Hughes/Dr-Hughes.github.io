@@ -1,47 +1,22 @@
 {{ define "main" }}
-  <h1 class="post-title">{{ .Params.banner.title }}</h1>
-
-  <div class="index-content">
-    <p>{{ .Params.banner.content }}</p>
-    {{ with .Params.banner.button }}
-      {{ if .enable }}
-        <p><a class="read-more button inline" href="{{ partial "siteurl.html" (dict "u" .link "p" $) }}">[{{ .label }}]</a></p>
-      {{ end }}
-    {{ end }}
-  </div>
-
-  {{ range .Params.features }}
-    <article class="post on-list">
-      <h2 class="post-title">{{ .title }}</h2>
-      {{/* Cards render their image only when the front matter has one;
-           the two former /images/image-placeholder.png references were
-           dropped because the file does not exist. */}}
-      {{ with .image }}
-        <img src="{{ partial "siteurl.html" (dict "u" . "p" $) }}" class="post-cover" alt="{{ $.Title | plainify }}">
-      {{ end }}
-      <div class="post-content">
-        <p>{{ .content }}</p>
-        {{ with .bulletpoints }}
-          <ul>
-            {{ range . }}
-              <li>{{ . | markdownify }}</li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      </div>
-      {{ with .button }}
-        {{ if .enable }}
-          <div>
-            <a class="read-more button inline" href="{{ partial "siteurl.html" (dict "u" .link "p" $) }}">[{{ .label }}]</a>
-          </div>
-        {{ end }}
-      {{ end }}
-    </article>
-  {{ end }}
-
-  {{ with .Content }}
-    <div class="index-content">
-      {{ . }}
+  <section class="home-hero">
+    <div class="avatar-ring">
+      <img src="{{ partial "siteurl.html" (dict "u" "/images/me.jpg" "p" $) }}" alt="Photo of {{ site.Params.name }}" width="144" height="144">
     </div>
-  {{ end }}
+    <div>
+      <h1 class="home-name">{{ site.Params.name }}</h1>
+      {{ with .Params.tagline }}<p class="home-tagline">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+
+  <section class="home-intro">{{ .Content }}</section>
+
+  <section class="home-cards" aria-label="Sections">
+    {{ range .Params.cards }}
+      <a class="home-card accent-{{ .accent }}" href="{{ partial "siteurl.html" (dict "u" .link "p" $) }}">
+        <h2>{{ .title }}</h2>
+        <p>{{ .text }}</p>
+      </a>
+    {{ end }}
+  </section>
 {{ end }}

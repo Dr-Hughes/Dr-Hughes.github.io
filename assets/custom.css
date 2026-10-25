@@ -1,0 +1,409 @@
+/*
+ * Nord Light for hugo-paper.
+ * White is the primary surface, Snow Storm greys give depth, Polar Night is
+ * the text, Frost is for links and Aurora is used only for gentle accents.
+ * https://www.nordtheme.com/docs/colors-and-palettes
+ */
+
+/*
+ * The theme's compiled CSS flattens cascade layers with :not(#\#) hacks (up
+ * to five deep), so plain selectors lose to it. Everything below is nested
+ * under a six-deep :not() chain to outrank those rules.
+ */
+:root:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+& {
+  /* Polar Night */
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  /* Snow Storm */
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  /* Frost */
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  /* Aurora */
+  --aurora-red: #bf616a;
+  --aurora-orange: #d08770;
+  --aurora-yellow: #ebcb8b;
+  --aurora-green: #a3be8c;
+  --aurora-purple: #b48ead;
+
+  --text: var(--nord0);
+  --muted: var(--nord3);
+  --surface: var(--nord6);
+  --line: var(--nord4);
+  /* nord10 darkened a little so links reach 4.5:1 on white */
+  --link: #476a94;
+  --link-hover: #2f4c70;
+
+  --color-black: var(--nord0);
+  --accent: var(--aurora-green);
+}
+
+body {
+  background: #fff;
+  color: var(--text);
+}
+
+.prose {
+  --tw-prose-body: var(--nord1);
+  --tw-prose-headings: var(--nord0);
+  --tw-prose-bold: var(--nord0);
+  --tw-prose-links: var(--link);
+  --tw-prose-bullets: var(--nord9);
+  --tw-prose-counters: var(--nord3);
+  --tw-prose-quotes: var(--nord1);
+  --tw-prose-quote-borders: var(--accent);
+  --tw-prose-hr: var(--line);
+  --tw-prose-captions: var(--nord3);
+  --tw-prose-code: var(--nord0);
+  --tw-prose-th-borders: var(--line);
+  --tw-prose-td-borders: var(--line);
+}
+
+/* Per-page accent, set by the accent-* class on <article> or cards */
+.accent-green { --accent: var(--aurora-green); }
+.accent-purple { --accent: var(--aurora-purple); }
+.accent-orange { --accent: var(--aurora-orange); }
+.accent-yellow { --accent: var(--aurora-yellow); }
+.accent-red { --accent: var(--aurora-red); }
+.accent-blue { --accent: var(--nord8); }
+
+/* Header, footer */
+header a,
+footer a {
+  color: var(--nord1);
+  text-decoration: none;
+}
+header nav a {
+  border-bottom: 2px solid transparent;
+  line-height: 1.6;
+  padding: 0.1rem 0;
+  transition: border-color 0.15s, color 0.15s;
+}
+header nav a:hover {
+  border-bottom-color: var(--aurora-green);
+  color: var(--nord0);
+}
+header > div:first-child a {
+  letter-spacing: -0.01em;
+}
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  opacity: 1;
+  color: var(--muted);
+}
+footer a:hover {
+  color: var(--link-hover);
+}
+
+/* Links in prose */
+article a:not(.btn) {
+  color: var(--link);
+  text-decoration-color: var(--nord8);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+article a:not(.btn):hover {
+  color: var(--link-hover);
+  text-decoration-color: var(--aurora-green);
+}
+
+/* Headings with a short accent bar */
+article h1 {
+  color: var(--nord0);
+  letter-spacing: -0.02em;
+}
+article h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5em;
+}
+article h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+article .page-lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+/* Quotes become soft callouts (used for the licence note) */
+article blockquote {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 0.9rem 1.2rem;
+  quotes: none;
+}
+article blockquote p {
+  margin: 0;
+}
+article blockquote p::before,
+article blockquote p::after {
+  content: none;
+}
+article hr {
+  border-color: var(--line);
+}
+article code:not(pre code) {
+  background: var(--surface);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.35rem;
+}
+
+/* Home */
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+.avatar-ring {
+  flex: none;
+  width: 9.5rem;
+  height: 9.5rem;
+  padding: 4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 200deg,
+    var(--aurora-green),
+    var(--nord8),
+    var(--aurora-purple),
+    var(--aurora-orange),
+    var(--aurora-yellow),
+    var(--aurora-green)
+  );
+}
+.avatar-ring img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+.home-name {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.home-tagline {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+.home-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.home-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  margin-top: 2.5rem;
+}
+.home-card {
+  display: block;
+  background: var(--surface);
+  border-radius: 0.75rem;
+  border-top: 4px solid var(--accent);
+  padding: 1rem 1.15rem 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.home-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 52, 64, 0.1);
+}
+.home-card h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.15rem;
+  color: var(--nord0);
+}
+.home-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Teaching tables and filters */
+.resource-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: flex-end;
+  margin: 1.75rem 0 0.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border-radius: 0.75rem;
+}
+.resource-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.resource-filters select,
+.resource-filters input,
+.resource-filters button {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--nord4);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  min-width: 7rem;
+}
+.resource-filters select:focus,
+.resource-filters input:focus,
+.resource-filters button:focus-visible {
+  outline: 2px solid var(--nord9);
+  outline-offset: 1px;
+}
+.resource-filters button {
+  min-width: 0;
+  cursor: pointer;
+  color: var(--link);
+  border-color: var(--nord9);
+}
+.resource-filters button:hover {
+  background: var(--nord6);
+}
+.resource-count {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.5rem 0;
+}
+.resource-table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.resource-table th,
+.resource-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+.resource-table th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 2px solid var(--nord8);
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.resource-table tbody tr:hover {
+  background: var(--surface);
+}
+.resource-desc {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.resource-files {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.resource-files li {
+  margin: 0 0 0.25rem;
+  padding: 0;
+}
+.resource-files li::before {
+  content: none;
+}
+.resource-table td a {
+  color: var(--link);
+}
+.resource-empty {
+  color: var(--muted);
+  padding: 1.5rem 0;
+}
+
+/* Chips: Frost for subjects, Aurora for levels, dark text throughout */
+.chip {
+  display: inline-block;
+  padding: 0.05rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--nord0);
+  background: var(--nord5);
+}
+.chip-computer-science { background: #bfdde6; }
+.chip-creative-imedia { background: #ecc2b5; }
+.chip-ks3 { background: #cfdec2; }
+.chip-gcse { background: #f4e3b9; }
+.chip-a-level { background: #dcc7d9; }
+
+.resource-tag {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #8a3c45;
+  background: rgba(191, 97, 106, 0.13);
+  border-radius: 0.3rem;
+}
+
+/* Contact */
+.contact-email {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-name {
+    font-size: 2rem;
+  }
+  .resource-filters label,
+  .resource-filters select,
+  .resource-filters input {
+    width: 100%;
+  }
+}
+
+}

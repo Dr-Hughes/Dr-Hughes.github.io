@@ -1,12 +1,11 @@
 {{ define "main" }}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-    </h1>
-
-    <div class="post-content">
-      <div>
-        {{ .Content }}
+  <article class="accent-green">
+    <header class="mb-14">
+      <h1 class="my-0! pb-2.5">{{ .Title | markdownify }}</h1>
+    </header>
+    <section>
+      {{ .Content }}
+      <div class="not-prose">
 
         <form class="resource-filters" id="resource-filters" aria-label="Filter lessons" onsubmit="return false">
           <label>Subject <select data-col="subject"><option value="">All</option></select></label>
@@ -32,10 +31,10 @@
               </tr>
             </thead>
             <tbody>
-              {{ range site.Data.teaching_resources }}
+              {{ range hugo.Data.teaching_resources }}
               <tr>
-                <td data-col="subject">{{ .subject }}</td>
-                <td data-col="level">{{ .level }}</td>
+                <td data-col="subject"><span class="chip chip-{{ .subject | urlize }}">{{ .subject }}</span></td>
+                <td data-col="level"><span class="chip chip-{{ .level | urlize }}">{{ .level }}</span></td>
                 <td data-col="year">{{ .year }}</td>
                 <td data-col="topic">{{ .topic }}</td>
                 <td data-col="lesson"><strong>{{ .lesson }}</strong></td>
@@ -56,31 +55,10 @@
         </div>
         <p class="resource-empty" id="resource-empty" hidden>No lessons match those filters.</p>
       </div>
-    </div>
+    </section>
   </article>
 
-  <style>
-    .resource-filters { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: flex-end; margin: 1.5rem 0 0.5rem; }
-    .resource-filters label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; }
-    .resource-filters select, .resource-filters input, .resource-filters button {
-      font: inherit; color: var(--foreground); background: var(--background);
-      border: 1px solid var(--accent); padding: 0.35rem 0.5rem; border-radius: 0;
-    }
-    .resource-filters button { cursor: pointer; color: var(--accent); }
-    .resource-filters button:hover { background: var(--accent); color: var(--background); }
-    .resource-count { font-size: 0.85rem; opacity: 0.8; margin: 0.5rem 0; }
-    .resource-table-wrap { overflow-x: auto; }
-    .resource-table { font-size: 0.85rem; width: 100%; border-collapse: collapse; }
-    .resource-table th, .resource-table td { vertical-align: top; text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(238, 195, 94, 0.25); }
-    .resource-table th { border-bottom: 2px solid var(--accent); white-space: nowrap; }
-    .resource-files { list-style: none; margin: 0; padding: 0; }
-    .resource-files li { margin: 0 0 0.2rem; padding: 0; }
-    .resource-files li::before { content: none; }
-    .resource-tag { font-size: 0.7rem; border: 1px solid var(--accent); color: var(--accent); padding: 0 0.3rem; margin-left: 0.25rem; white-space: nowrap; }
-    @media (max-width: 684px) {
-      .resource-filters label, .resource-filters select, .resource-filters input { width: 100%; }
-    }
-  </style>
+  <style>:root:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) { --w: 68rem; }</style>
 
   <script>
     (function () {

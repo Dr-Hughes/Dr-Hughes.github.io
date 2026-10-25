@@ -1,21 +1,15 @@
 ---
 title: "Research & Publications"
 meta_title: "Research"
-description: "Explore Aoife Hughes' research in computational biology, plant cell signaling, and data science"
-cover: "/images/me.png"
+description: "Publications from Aoife Hughes in computational biology, plant cell signalling and data science"
+accent: "purple"
 draft: false
 ---
 
+
 ## Research Overview
 
-My research focuses on computational modeling of biological systems, particularly plant cell signaling and intercellular communication. I develop mathematical models and simulations to understand complex cellular processes, with a particular interest in transport phenomena and data visualization.
-
-### Current Focus Areas
-
-- **Computational Biology**: Modeling molecular transport in plant cells
-- **Biophysics Simulations**: Narrow escape problems and diffusion processes  
-- **Data Science**: High-content analysis using advanced imaging techniques
-- **Open Source Software**: Developing tools for scientific computing
+My research focuses on computational modelling of biological systems, particularly plant cell signalling and intercellular communication. I develop mathematical models and simulations to understand complex cellular processes, with a particular interest in transport phenomena and data visualisation.
 
 ---
 
@@ -44,31 +38,3 @@ My research focuses on computational modeling of biological systems, particularl
 
 **2017**
 - **Hughes, A. et al.** (2017). "Non-Destructive, High-Content Analysis of Wheat Grain Traits Using X-Ray Micro Computed Tomography" *Plant Methods*. [DOI: 10.1186/s13007-017-0229-8](https://doi.org/10.1186/s13007-017-0229-8) | [PubMed](https://pubmed.ncbi.nlm.nih.gov/29118820/) | [PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664813/)
-
----
-
-## Education & Training
-
-**Ph.D. in Computational Modelling of Cellular Information Transfer** (2018-2022)  
-*John Innes Centre, England, UK*
-- Conducted forefront research on plant cell signalling in a multidisciplinary team
-- Mentored M.Sc. and undergraduate students, enhancing their academic progression  
-- Published in prestigious academic journals and championed open-source software projects
-
-**B.Sc. in Computer Science, First Class Honours** (2014-2018)  
-*Aberystwyth University, Wales, UK*
-- Dissertation led to two notable research publications, highlighting academic prowess
-
----
-
-## Awards & Recognition
-
-- **Software Sustainability Institute Fellowship** (2023) - England, UK
-- **DigiEduHack Climate Change Contest** - Finalist (2022) - England, UK  
-- **UK Open Source Awards** - Winner (2019) - Wales, UK
-- **Biotechnology and Biological Sciences Research Council** - Fully Funded Ph.D. (2018) - England, UK
-- **Genetics Society Research Grant** - Awardee (2017) - Wales, UK
-
----
-
-*For more details about any of these projects or potential collaborations, feel free to connect with me via my [GitHub](https://github.com/AoifeHughes).*
