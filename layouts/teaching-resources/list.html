@@ -1,0 +1,129 @@
+{{ define "main" }}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    </h1>
+
+    <div class="post-content">
+      <div>
+        {{ .Content }}
+
+        <form class="resource-filters" id="resource-filters" aria-label="Filter lessons" onsubmit="return false">
+          <label>Subject <select data-col="subject"><option value="">All</option></select></label>
+          <label>Level <select data-col="level"><option value="">All</option></select></label>
+          <label>Year <select data-col="year"><option value="">All</option></select></label>
+          <label>Topic <select data-col="topic"><option value="">All</option></select></label>
+          <label class="resource-search">Search <input type="search" id="resource-search" placeholder="lesson title"></label>
+          <button type="button" id="resource-reset">Reset</button>
+        </form>
+        <p class="resource-count" id="resource-count" aria-live="polite"></p>
+
+        <div class="resource-table-wrap">
+          <table class="resource-table" id="resource-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Level</th>
+                <th>Year</th>
+                <th>Topic</th>
+                <th>Lesson</th>
+                <th>Slides</th>
+                <th>Worksheets</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range site.Data.teaching_resources }}
+              <tr>
+                <td data-col="subject">{{ .subject }}</td>
+                <td data-col="level">{{ .level }}</td>
+                <td data-col="year">{{ .year }}</td>
+                <td data-col="topic">{{ .topic }}</td>
+                <td data-col="lesson"><strong>{{ .lesson }}</strong></td>
+                <td><a href="{{ partial "siteurl.html" (dict "u" .pptx "p" $) }}" download>PPTX</a></td>
+                <td>
+                  {{ with .worksheets }}
+                    <ul class="resource-files">
+                      {{ range . }}
+                      <li><a href="{{ partial "siteurl.html" (dict "u" .url "p" $) }}" download>{{ .label }}</a>{{ if eq .kind "teacher" }} <span class="resource-tag">teacher</span>{{ end }}</li>
+                      {{ end }}
+                    </ul>
+                  {{ else }}&mdash;{{ end }}
+                </td>
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+        <p class="resource-empty" id="resource-empty" hidden>No lessons match those filters.</p>
+      </div>
+    </div>
+  </article>
+
+  <style>
+    .resource-filters { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: flex-end; margin: 1.5rem 0 0.5rem; }
+    .resource-filters label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; }
+    .resource-filters select, .resource-filters input, .resource-filters button {
+      font: inherit; color: var(--foreground); background: var(--background);
+      border: 1px solid var(--accent); padding: 0.35rem 0.5rem; border-radius: 0;
+    }
+    .resource-filters button { cursor: pointer; color: var(--accent); }
+    .resource-filters button:hover { background: var(--accent); color: var(--background); }
+    .resource-count { font-size: 0.85rem; opacity: 0.8; margin: 0.5rem 0; }
+    .resource-table-wrap { overflow-x: auto; }
+    .resource-table { font-size: 0.85rem; width: 100%; border-collapse: collapse; }
+    .resource-table th, .resource-table td { vertical-align: top; text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(238, 195, 94, 0.25); }
+    .resource-table th { border-bottom: 2px solid var(--accent); white-space: nowrap; }
+    .resource-files { list-style: none; margin: 0; padding: 0; }
+    .resource-files li { margin: 0 0 0.2rem; padding: 0; }
+    .resource-files li::before { content: none; }
+    .resource-tag { font-size: 0.7rem; border: 1px solid var(--accent); color: var(--accent); padding: 0 0.3rem; margin-left: 0.25rem; white-space: nowrap; }
+    @media (max-width: 684px) {
+      .resource-filters label, .resource-filters select, .resource-filters input { width: 100%; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var table = document.getElementById('resource-table');
+      var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+      var selects = Array.prototype.slice.call(document.querySelectorAll('#resource-filters select'));
+      var search = document.getElementById('resource-search');
+      var count = document.getElementById('resource-count');
+      var empty = document.getElementById('resource-empty');
+
+      function cell(row, col) { return row.querySelector('[data-col="' + col + '"]').textContent.trim(); }
+
+      // Options come straight from the table, in the order they first appear.
+      selects.forEach(function (sel) {
+        var seen = {};
+        rows.forEach(function (row) {
+          var v = cell(row, sel.dataset.col);
+          if (!seen[v]) { seen[v] = true; sel.add(new Option(v, v)); }
+        });
+      });
+
+      function apply() {
+        var q = search.value.trim().toLowerCase();
+        var shown = 0;
+        rows.forEach(function (row) {
+          var ok = selects.every(function (sel) { return !sel.value || cell(row, sel.dataset.col) === sel.value; });
+          if (ok && q) { ok = cell(row, 'lesson').toLowerCase().indexOf(q) !== -1 || cell(row, 'topic').toLowerCase().indexOf(q) !== -1; }
+          row.hidden = !ok;
+          if (ok) shown++;
+        });
+        count.textContent = 'Showing ' + shown + ' of ' + rows.length + ' lessons';
+        empty.hidden = shown !== 0;
+        table.hidden = shown === 0;
+      }
+
+      selects.forEach(function (sel) { sel.addEventListener('change', apply); });
+      search.addEventListener('input', apply);
+      document.getElementById('resource-reset').addEventListener('click', function () {
+        selects.forEach(function (sel) { sel.value = ''; });
+        search.value = '';
+        apply();
+      });
+      apply();
+    })();
+  </script>
+{{ end }}
