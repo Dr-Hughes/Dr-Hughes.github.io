@@ -1,4 +1,4 @@
-# Aoife Hughes — personal website
+# Dr. Hughes — personal website
 
 Static site for [dr-hughes.github.io](https://dr-hughes.github.io), built
 with [Hugo](https://gohugo.io) and the

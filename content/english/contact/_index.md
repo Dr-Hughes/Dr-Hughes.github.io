@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 meta_title: "Contact"
-description: "Get in touch with Aoife Hughes"
+description: "Get in touch with Dr. Hughes"
 accent: "yellow"
 draft: false
 ---

@@ -220,20 +220,6 @@
 
 - subject: "Creative iMedia"
   level: "GCSE"
-  year: "Y10"
-  topic: "Term 1 Recall"
-  lesson: "Term 1 Recall"
-  pptx: "/teaching/gcse-y10-term-1-recall-term-1-recall/y10-creative-imedia.pptx"
-
-- subject: "Creative iMedia"
-  level: "GCSE"
-  year: "Y10"
-  topic: "Term 1 Recall"
-  lesson: "Media Sectors 5-A-DAY"
-  pptx: "/teaching/gcse-y10-term-1-recall-media-sectors-5-a-day/y10-media-sectors-5-a-day.pptx"
-
-- subject: "Creative iMedia"
-  level: "GCSE"
   year: "Y11"
   topic: "Flowcharts"
   lesson: "Flowcharts"
@@ -242,10 +228,3 @@
     - label: "Worksheet (PDF)"
       url: "/teaching/gcse-y11-flowcharts-flowcharts/y11-flowcharts-worksheet.pdf"
       kind: "student"
-
-- subject: "Creative iMedia"
-  level: "GCSE"
-  year: "Y11"
-  topic: "Term 1 Recall"
-  lesson: "Term 1 Recall"
-  pptx: "/teaching/gcse-y11-term-1-recall-term-1-recall/y11-creative-imedia.pptx"

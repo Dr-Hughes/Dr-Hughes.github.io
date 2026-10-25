@@ -1,16 +1,23 @@
 ---
 title: "About"
 meta_title: "About"
-description: "About Aoife Hughes: teacher, scientist and all-round nerd"
+description: "About Dr. Hughes: teacher, scientist and all-round nerd"
 accent: "orange"
 draft: false
 ---
 
-I'm Aoife, a computational biologist turned teacher. I'm working on my PGCE to become a qualified secondary school teacher of Computer Science and Maths.
+I'm a computational biologist turned teacher, working on my PGCE to become a qualified secondary school teacher of Computer Science and Maths.
 
 ## Teaching
 
 So far my lessons cover Computer Science from Year 7 up to A-level, and Creative iMedia at GCSE. I like building a lesson around a problem the class can get stuck into, such as cracking a vault to learn the fetch-execute cycle, or decoding a hidden message in a photo with Python.
+
+I have a love for unplugged lessons and for finding alternative ways to engage students.
+
+<figure class="about-figure">
+  <img src="/images/turtles-unplugged.jpg" alt="Paper turtle, stars and blue circles laid out on a desk as a maze, with strips of paper command cards beside it" width="797" height="1200" loading="lazy">
+  <figcaption>An unplugged turtle maze: pairs programme the turtle with paper command cards.</figcaption>
+</figure>
 
 Everything I make is on the [Teaching page](/teaching/), free to use and modify.
 
@@ -29,7 +36,3 @@ Since then I've changed hats a lot: robotic greenhouses, climate change, crop se
 - **UK Open Source Awards**, winner (2019)
 - **BBSRC fully funded Ph.D. scholarship** (2018)
 - **Genetics Society Research Grant** (2017)
-
-## Beyond the classroom
-
-I enjoy science communication, data visualisation (Plotly and D3.js are favourites), open source software and a lot of gaming.

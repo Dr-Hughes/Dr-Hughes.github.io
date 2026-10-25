@@ -12,7 +12,7 @@ cards:
     link: "/research/"
     accent: "purple"
   - title: "About"
-    text: "How I got into teaching, and where I came from."
+    text: "About me and my work."
     link: "/about/"
     accent: "orange"
   - title: "Contact"
@@ -21,8 +21,4 @@ cards:
     accent: "yellow"
 ---
 
-I've a PhD in computational biology, so I find myself changing hats daily between computer scientist, biologist, mathematician and physicist.
-
-In the past I've worked on robotic greenhouses, climate change, crop security, patient safety and opioid usage with the NHS, and drug discovery, all while doing scientific outreach whenever I can.
-
-I'm currently working on my PGCE to become a qualified secondary school teacher.
+I've been fortunate to work on a wide range of projects, organisations and topics, from robotic greenhouses to the NHS. These days I'm working on my PGCE to become a qualified secondary school teacher.

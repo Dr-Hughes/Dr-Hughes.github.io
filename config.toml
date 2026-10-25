@@ -3,9 +3,9 @@
 # the gh-pages workflow overrides this with --baseURL at build time.
 baseURL = "/"
 languageCode = "en-GB"
-title = "Aoife Hughes"
+title = "Dr. Hughes"
 theme = "hugo-paper"
-copyright = "© 2026 Aoife Hughes"
+copyright = "© 2026 Dr. Hughes"
 timeZone = "Europe/London"
 summaryLength = 10
 enableEmoji = true
@@ -37,8 +37,8 @@ noClasses = false
 # "light" gives the theme's plain white page background (#fff).
 color = "light"
 description = "Teacher, scientist and all-round nerd. Computer Science and Maths teaching resources, plus research in computational biology."
-author = "Aoife Hughes"
-name = "Aoife Hughes"
+author = "Dr. Hughes"
+name = "Dr. Hughes"
 github = "Dr-Hughes"
 disablePostNavigation = true
 

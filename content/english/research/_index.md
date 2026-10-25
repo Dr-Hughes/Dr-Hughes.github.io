@@ -1,7 +1,7 @@
 ---
 title: "Research & Publications"
 meta_title: "Research"
-description: "Publications from Aoife Hughes in computational biology, plant cell signalling and data science"
+description: "Publications from Dr. Hughes in computational biology, plant cell signalling and data science"
 accent: "purple"
 draft: false
 ---
