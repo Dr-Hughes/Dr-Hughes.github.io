@@ -83,6 +83,23 @@
   pptx: "/teaching/gcse-y10-systems-architecture-recap-and-exam-practice/y10-systems-architecture-recap.pptx"
 
 - subject: "Computer Science"
+  level: "GCSE"
+  year: "Y10–11"
+  topic: "Monte Carlo"
+  lesson: "Guessing π with Random Darts"
+  html: "/slides/decks/monte-carlo-pi/"
+  worksheets:
+    - label: "Independent worksheet (PDF)"
+      url: "/teaching/gcse-y10-11-monte-carlo-guessing-pi-with-random-darts/guessing-pi-worksheet.pdf"
+      kind: "student"
+    - label: "Independent worksheet (Word)"
+      url: "/teaching/gcse-y10-11-monte-carlo-guessing-pi-with-random-darts/guessing-pi-worksheet.docx"
+      kind: "student"
+    - label: "Teacher version (PDF)"
+      url: "/teaching/gcse-y10-11-monte-carlo-guessing-pi-with-random-darts/guessing-pi-worksheet-teacher-version.pdf"
+      kind: "teacher"
+
+- subject: "Computer Science"
   level: "A-level"
   year: "Y12"
   topic: "Networks"

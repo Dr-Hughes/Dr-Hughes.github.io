@@ -38,7 +38,11 @@
                 <td data-col="year">{{ .year }}</td>
                 <td data-col="topic">{{ .topic }}</td>
                 <td data-col="lesson"><strong>{{ .lesson }}</strong></td>
-                <td><a href="{{ partial "siteurl.html" (dict "u" .pptx "p" $) }}" download>PPTX</a></td>
+                <td>
+                  {{ with .pptx }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}" download>PPTX</a>{{ end }}
+                  {{ with .html }}<a href="{{ partial "siteurl.html" (dict "u" . "p" $) }}">Online</a>{{ end }}
+                  {{ if not (or .pptx .html) }}&mdash;{{ end }}
+                </td>
                 <td>
                   {{ with .worksheets }}
                     <ul class="resource-files">
