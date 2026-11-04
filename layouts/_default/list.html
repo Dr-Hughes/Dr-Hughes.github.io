@@ -1,9 +1,0 @@
-{{ define "main" }}
-  <article class="accent-{{ .Params.accent | default "blue" }}">
-    <header class="mb-14">
-      <h1 class="my-0! pb-2.5">{{ .Title | markdownify }}</h1>
-      {{ with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
-    </header>
-    <section>{{ .Content }}</section>
-  </article>
-{{ end }}
