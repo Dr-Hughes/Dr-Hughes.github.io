@@ -1,0 +1,362 @@
+{
+  "topics": [
+    {
+      "id": "basics",
+      "title": "Print & Variables",
+      "emoji": "👋",
+      "color": "#5e81ac",
+      "blurb": "Make Python talk, then teach it to remember things in variables.",
+      "lessons": [
+        {
+          "id": "hello-world",
+          "title": "Hello, world!",
+          "file": "basics-hello-world.json"
+        },
+        {
+          "id": "variables",
+          "title": "Store it in a variable",
+          "file": "basics-variables.json"
+        },
+        {
+          "id": "coin-collector",
+          "title": "Coin collector",
+          "file": "basics-coin-collector.json"
+        },
+        {
+          "id": "pizza-maths",
+          "title": "Pizza party maths",
+          "file": "basics-pizza-maths.json"
+        },
+        {
+          "id": "hero-stats",
+          "title": "Hero stats",
+          "file": "basics-hero-stats.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "snack-shop",
+          "title": "Snack shop",
+          "file": "basics-ch-snack-shop.json"
+        },
+        {
+          "id": "football-pitch",
+          "title": "Football pitch",
+          "file": "basics-ch-football-pitch.json"
+        },
+        {
+          "id": "swap-drinks",
+          "title": "Swap the drinks",
+          "file": "basics-ch-swap-drinks.json"
+        }
+      ]
+    },
+    {
+      "id": "strings",
+      "title": "Input & Strings",
+      "emoji": "💬",
+      "color": "#b48ead",
+      "blurb": "Ask the user questions, then twist their answers into new shapes.",
+      "lessons": [
+        {
+          "id": "say-hello",
+          "title": "Say hello",
+          "file": "strings-say-hello.json"
+        },
+        {
+          "id": "shout",
+          "title": "Shout it out",
+          "file": "strings-shout.json"
+        },
+        {
+          "id": "name-length",
+          "title": "Letter counter",
+          "file": "strings-name-length.json"
+        },
+        {
+          "id": "agent-name",
+          "title": "Secret agent name",
+          "file": "strings-agent-name.json"
+        },
+        {
+          "id": "days-alive",
+          "title": "How many days old?",
+          "file": "strings-days-alive.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "robot-voice",
+          "title": "Robot voice",
+          "file": "strings-ch-robot-voice.json"
+        },
+        {
+          "id": "username",
+          "title": "Username maker",
+          "file": "strings-ch-username.json"
+        },
+        {
+          "id": "story-maker",
+          "title": "Story maker",
+          "file": "strings-ch-story-maker.json"
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "title": "If & Else",
+      "emoji": "🔀",
+      "color": "#d08770",
+      "blurb": "Teach your code to make choices, like a game deciding whether you win.",
+      "lessons": [
+        {
+          "id": "hot-day",
+          "title": "Is it hot?",
+          "file": "decisions-hot-day.json"
+        },
+        {
+          "id": "quiz-result",
+          "title": "Quiz result",
+          "file": "decisions-quiz-result.json"
+        },
+        {
+          "id": "match-report",
+          "title": "Match report",
+          "file": "decisions-match-report.json"
+        },
+        {
+          "id": "theme-park",
+          "title": "Theme park ride",
+          "file": "decisions-theme-park.json"
+        },
+        {
+          "id": "treasure-chest",
+          "title": "Treasure chest",
+          "file": "decisions-treasure-chest.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "odd-even",
+          "title": "Odd or even?",
+          "file": "decisions-ch-odd-even.json"
+        },
+        {
+          "id": "medals",
+          "title": "Medal ceremony",
+          "file": "decisions-ch-medals.json"
+        },
+        {
+          "id": "cinema",
+          "title": "Cinema tickets",
+          "file": "decisions-ch-cinema.json"
+        }
+      ]
+    },
+    {
+      "id": "loops",
+      "title": "Loops",
+      "emoji": "🔁",
+      "color": "#6f8f5a",
+      "blurb": "Let the computer do the boring, repeating bits for you, super fast.",
+      "lessons": [
+        {
+          "id": "count-up",
+          "title": "Count up",
+          "file": "loops-count-up.json"
+        },
+        {
+          "id": "times-table",
+          "title": "Times table",
+          "file": "loops-times-table.json"
+        },
+        {
+          "id": "sticker-total",
+          "title": "Sticker collector",
+          "file": "loops-sticker-total.json"
+        },
+        {
+          "id": "countdown",
+          "title": "Rocket countdown",
+          "file": "loops-countdown.json"
+        },
+        {
+          "id": "vowel-hunter",
+          "title": "Vowel hunter",
+          "file": "loops-vowel-hunter.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "even-steps",
+          "title": "Two, four, six, eight",
+          "file": "loops-ch-even-steps.json"
+        },
+        {
+          "id": "password",
+          "title": "Password guard",
+          "file": "loops-ch-password.json"
+        },
+        {
+          "id": "fizzbuzz",
+          "title": "FizzBuzz",
+          "file": "loops-ch-fizzbuzz.json"
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Lists",
+      "emoji": "📋",
+      "color": "#4f8fa3",
+      "blurb": "Keep lots of things together in one place, like a playlist or a backpack.",
+      "lessons": [
+        {
+          "id": "snack-menu",
+          "title": "Snack menu",
+          "file": "lists-snack-menu.json"
+        },
+        {
+          "id": "backpack",
+          "title": "Pack your backpack",
+          "file": "lists-backpack.json"
+        },
+        {
+          "id": "playlist",
+          "title": "Playlist",
+          "file": "lists-playlist.json"
+        },
+        {
+          "id": "goal-stats",
+          "title": "Goal stats",
+          "file": "lists-goal-stats.json"
+        },
+        {
+          "id": "toppings",
+          "title": "Pizza toppings",
+          "file": "lists-toppings.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "vet-queue",
+          "title": "Vet queue",
+          "file": "lists-ch-vet-queue.json"
+        },
+        {
+          "id": "shopping-total",
+          "title": "Shopping total",
+          "file": "lists-ch-shopping-total.json"
+        },
+        {
+          "id": "high-scores",
+          "title": "High score table",
+          "file": "lists-ch-high-scores.json"
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions",
+      "emoji": "🧩",
+      "color": "#b08a2e",
+      "blurb": "Bundle code into your own commands, then use them again and again.",
+      "lessons": [
+        {
+          "id": "cheer",
+          "title": "Your first function",
+          "file": "functions-cheer.json"
+        },
+        {
+          "id": "pet-club",
+          "title": "Pet club",
+          "file": "functions-pet-club.json"
+        },
+        {
+          "id": "pizza-cost",
+          "title": "Pizza price",
+          "file": "functions-pizza-cost.json"
+        },
+        {
+          "id": "battle",
+          "title": "Battle time",
+          "file": "functions-battle.json"
+        },
+        {
+          "id": "badges",
+          "title": "Star badges",
+          "file": "functions-badges.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "temperature",
+          "title": "Temperature converter",
+          "file": "functions-ch-temperature.json"
+        },
+        {
+          "id": "climbing-wall",
+          "title": "Climbing wall",
+          "file": "functions-ch-climbing-wall.json"
+        },
+        {
+          "id": "biggest",
+          "title": "Build your own max",
+          "file": "functions-ch-biggest.json"
+        }
+      ]
+    },
+    {
+      "id": "turtle-zone",
+      "title": "Turtle Zone",
+      "emoji": "🐢",
+      "color": "#3f8f8a",
+      "freeplay": true,
+      "blurb": "Code a turtle to draw shapes, stars and rainbow patterns, then go wild in Freeplay!",
+      "lessons": [
+        {
+          "id": "square",
+          "title": "Draw a square",
+          "file": "turtle-zone-square.json"
+        },
+        {
+          "id": "rainbow-triangle",
+          "title": "Rainbow triangle",
+          "file": "turtle-zone-rainbow-triangle.json"
+        },
+        {
+          "id": "gold-star",
+          "title": "Gold star",
+          "file": "turtle-zone-gold-star.json"
+        },
+        {
+          "id": "rainbow-spiral",
+          "title": "Rainbow spiral",
+          "file": "turtle-zone-rainbow-spiral.json"
+        },
+        {
+          "id": "rainbow-flower",
+          "title": "Rainbow flower",
+          "file": "turtle-zone-rainbow-flower.json"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "honeycomb",
+          "title": "Honeycomb hexagon",
+          "file": "turtle-zone-ch-honeycomb.json"
+        },
+        {
+          "id": "shape-maker",
+          "title": "Shape maker",
+          "file": "turtle-zone-ch-shape-maker.json"
+        },
+        {
+          "id": "square-spinner",
+          "title": "Square spinner",
+          "file": "turtle-zone-ch-square-spinner.json"
+        }
+      ]
+    }
+  ]
+}

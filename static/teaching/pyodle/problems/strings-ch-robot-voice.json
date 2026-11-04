@@ -1,0 +1,63 @@
+{
+  "id": "robot-voice",
+  "title": "Robot voice",
+  "instruction": "Teach the robot to repeat your message in CAPITALS, count its letters, and then say it backwards.",
+  "hint": "word[::-1] is a sneaky slice that reads a string backwards.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "word = input(\"Say something to the robot: \")"
+    },
+    {
+      "id": "b",
+      "code": "print(\"ROBOT SAYS: \" + ___)",
+      "blanks": [
+        {
+          "answer": "word.upper()",
+          "hint": "Make the word shouty"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "code": "print(\"Your message has \" + ___ + \" letters.\")",
+      "blanks": [
+        {
+          "answer": "str(len(word))",
+          "hint": "Count the letters, then turn the number into text"
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "code": "print(\"Backwards: \" + ___)",
+      "blanks": [
+        {
+          "answer": "word[::-1]",
+          "hint": "Slice the word backwards"
+        }
+      ]
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "d",
+    "a",
+    "c"
+  ],
+  "stdinDefault": "hello",
+  "expectedOutput": [
+    "Say something to the robot: hello",
+    "ROBOT SAYS: HELLO",
+    "Your message has 5 letters.",
+    "Backwards: olleh"
+  ]
+}

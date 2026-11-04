@@ -1,0 +1,55 @@
+{
+  "id": "goal-stats",
+  "title": "Goal stats",
+  "instruction": "Here are your team's goals so far. Add today's 2 goals to the list, then print the total, the best match and the average goals per match.",
+  "hint": "sum(), max() and len() all work on a whole list at once.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "goals = [2, 0, 3, 1, 4]"
+    },
+    {
+      "id": "b",
+      "code": "goals.append(2)"
+    },
+    {
+      "id": "c",
+      "code": "total = sum(goals)"
+    },
+    {
+      "id": "d",
+      "code": "print(f\"Total goals in {len(goals)} matches: {total}\")"
+    },
+    {
+      "id": "e",
+      "code": "print(f\"Best match: {max(goals)} goals\")"
+    },
+    {
+      "id": "f",
+      "code": "print(f\"Average per match: {total / len(goals)}\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "d",
+    "f",
+    "e",
+    "c",
+    "a"
+  ],
+  "expectedOutput": [
+    "Total goals in 6 matches: 12",
+    "Best match: 4 goals",
+    "Average per match: 2.0"
+  ]
+}

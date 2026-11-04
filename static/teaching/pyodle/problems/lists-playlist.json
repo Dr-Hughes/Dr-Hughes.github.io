@@ -1,0 +1,52 @@
+{
+  "id": "playlist",
+  "title": "Playlist",
+  "instruction": "Say how many songs are in the playlist, then use a loop to print each song on its own line. Finish with \"End of playlist.\".",
+  "hint": "for song in playlist: gives you each song in turn.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "playlist = [\"Lo-fi Beats\", \"Space Disco\", \"Pixel Party\"]"
+    },
+    {
+      "id": "b",
+      "code": "print(f\"Playlist has {len(playlist)} songs:\")"
+    },
+    {
+      "id": "c",
+      "code": "for song in playlist:"
+    },
+    {
+      "id": "d",
+      "code": "print(\"-\", song)",
+      "indent": 1
+    },
+    {
+      "id": "e",
+      "code": "print(\"End of playlist.\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  ],
+  "jumble": [
+    "c",
+    "e",
+    "d",
+    "b",
+    "a"
+  ],
+  "expectedOutput": [
+    "Playlist has 3 songs:",
+    "- Lo-fi Beats",
+    "- Space Disco",
+    "- Pixel Party",
+    "End of playlist."
+  ]
+}

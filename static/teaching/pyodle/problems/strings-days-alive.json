@@ -1,0 +1,58 @@
+{
+  "id": "days-alive",
+  "title": "How many days old?",
+  "instruction": "Greet the user, then ask their age. Work out roughly how many days they have been alive, then how many hours that is. input() always gives you text, so turn the age into a number with int().",
+  "hint": "Ask, then work it out, then print: data has to exist before you can use it.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "name = input(\"What is your name? \")"
+    },
+    {
+      "id": "b",
+      "code": "print(f\"Nice to meet you, {name}!\")"
+    },
+    {
+      "id": "c",
+      "code": "age = int(input(\"How old are you? \"))"
+    },
+    {
+      "id": "d",
+      "code": "days = age * 365"
+    },
+    {
+      "id": "e",
+      "code": "print(f\"You have been alive for about {days} days.\")"
+    },
+    {
+      "id": "f",
+      "code": "print(f\"That is about {days * 24} hours!\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ]
+  ],
+  "jumble": [
+    "e",
+    "d",
+    "b",
+    "f",
+    "c",
+    "a"
+  ],
+  "stdinDefault": "Sarah\n12",
+  "expectedOutput": [
+    "What is your name? Sarah",
+    "Nice to meet you, Sarah!",
+    "How old are you? 12",
+    "You have been alive for about 4380 days.",
+    "That is about 105120 hours!"
+  ]
+}

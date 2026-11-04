@@ -1,0 +1,48 @@
+{
+  "id": "backpack",
+  "title": "Pack your backpack",
+  "instruction": "Your backpack already has water and a map. Add a torch, then some snacks, then print the backpack and how many things are in it.",
+  "hint": ".append() adds an item to the END of a list.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "backpack = [\"water\", \"map\"]"
+    },
+    {
+      "id": "b",
+      "code": "backpack.append(\"torch\")"
+    },
+    {
+      "id": "c",
+      "code": "backpack.append(\"snacks\")"
+    },
+    {
+      "id": "d",
+      "code": "print(backpack)"
+    },
+    {
+      "id": "e",
+      "code": "print(f\"Items packed: {len(backpack)}\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  ],
+  "jumble": [
+    "e",
+    "d",
+    "b",
+    "a",
+    "c"
+  ],
+  "expectedOutput": [
+    "['water', 'map', 'torch', 'snacks']",
+    "Items packed: 4"
+  ]
+}

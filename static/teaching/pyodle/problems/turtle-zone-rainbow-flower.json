@@ -1,0 +1,107 @@
+{
+  "id": "rainbow-flower",
+  "title": "Rainbow flower",
+  "instruction": "Grow a flower! Draw six filled circles, each in a new colour, turning 60 degrees after each petal. Finish with a white dot in the middle.",
+  "hint": "Each petal needs its own begin_fill() and end_fill() inside the loop.",
+  "turtle": true,
+  "blocks": [
+    {
+      "id": "a",
+      "code": "import turtle"
+    },
+    {
+      "id": "b",
+      "code": "t = turtle.Turtle()"
+    },
+    {
+      "id": "c",
+      "code": "for colour in [\"red\", \"orange\", \"gold\", \"green\", \"blue\", \"purple\"]:"
+    },
+    {
+      "id": "d",
+      "code": "t.color(colour)",
+      "indent": 1
+    },
+    {
+      "id": "e",
+      "code": "t.begin_fill()",
+      "indent": 1
+    },
+    {
+      "id": "f",
+      "code": "t.circle(80)",
+      "indent": 1
+    },
+    {
+      "id": "g",
+      "code": "t.end_fill()",
+      "indent": 1
+    },
+    {
+      "id": "h",
+      "code": "t.left(60)",
+      "indent": 1
+    },
+    {
+      "id": "i",
+      "code": "t.dot(40, \"white\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "h",
+      "g",
+      "i"
+    ],
+    [
+      "a",
+      "b",
+      "c",
+      "e",
+      "d",
+      "f",
+      "g",
+      "h",
+      "i"
+    ],
+    [
+      "a",
+      "b",
+      "c",
+      "e",
+      "d",
+      "f",
+      "h",
+      "g",
+      "i"
+    ]
+  ],
+  "jumble": [
+    "f",
+    "h",
+    "e",
+    "b",
+    "i",
+    "a",
+    "d",
+    "g",
+    "c"
+  ]
+}

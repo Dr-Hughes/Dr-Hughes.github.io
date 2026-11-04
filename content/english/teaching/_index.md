@@ -17,5 +17,12 @@ by subject, level, year or topic. Slides are PowerPoint files and worksheets are
 PDF or Word, so everything can be edited for your own class. Teacher versions
 and answers are marked as such.
 
+**New: [Pyodle](/teaching/pyodle/)**, Python puzzles that run in the browser.
+Students put jumbled lines of code in order (correct lines lock in place), fill
+in the blanks in challenge mode, draw with an animated turtle, or write their own
+code. There are seven topics from printing to functions, plus a Turtle Zone.
+Nothing to install, and each lesson has its own link, e.g.
+[/teaching/pyodle/loops/](/teaching/pyodle/loops/).
+
 Looking for browser-based decks from workshops? They are on the
 [slide decks page](/teaching/slides/).

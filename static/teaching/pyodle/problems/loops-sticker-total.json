@@ -1,0 +1,56 @@
+{
+  "id": "sticker-total",
+  "title": "Sticker collector",
+  "instruction": "On day 1 you get 1 sticker, on day 2 you get 2 more, and so on for a week. Print the running total each day, then the grand total at the end.",
+  "hint": "Start the total at 0 BEFORE the loop, or it would reset every day.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "stickers = 0"
+    },
+    {
+      "id": "b",
+      "code": "for day in range(1, 8):"
+    },
+    {
+      "id": "c",
+      "code": "stickers = stickers + day",
+      "indent": 1
+    },
+    {
+      "id": "d",
+      "code": "print(f\"Day {day}: {stickers} stickers\")",
+      "indent": 1
+    },
+    {
+      "id": "e",
+      "code": "print(\"Total stickers:\", stickers)"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  ],
+  "jumble": [
+    "d",
+    "c",
+    "a",
+    "e",
+    "b"
+  ],
+  "expectedOutput": [
+    "Day 1: 1 stickers",
+    "Day 2: 3 stickers",
+    "Day 3: 6 stickers",
+    "Day 4: 10 stickers",
+    "Day 5: 15 stickers",
+    "Day 6: 21 stickers",
+    "Day 7: 28 stickers",
+    "Total stickers: 28"
+  ]
+}

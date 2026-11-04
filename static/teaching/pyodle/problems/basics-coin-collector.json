@@ -1,0 +1,48 @@
+{
+  "id": "coin-collector",
+  "title": "Coin collector",
+  "instruction": "You start a game with 0 coins. Print your coins, grab 10 coins, then a bonus round doubles them. Finally print your coins after the bonus round.",
+  "hint": "A variable can change! coins = coins + 10 means \"take the old value and add 10\".",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "coins = 0"
+    },
+    {
+      "id": "b",
+      "code": "print(\"Coins:\", coins)"
+    },
+    {
+      "id": "c",
+      "code": "coins = coins + 10"
+    },
+    {
+      "id": "d",
+      "code": "coins = coins * 2"
+    },
+    {
+      "id": "e",
+      "code": "print(\"After the bonus round:\", coins)"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  ],
+  "jumble": [
+    "d",
+    "c",
+    "b",
+    "e",
+    "a"
+  ],
+  "expectedOutput": [
+    "Coins: 0",
+    "After the bonus round: 20"
+  ]
+}

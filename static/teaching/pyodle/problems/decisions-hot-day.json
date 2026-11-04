@@ -1,0 +1,43 @@
+{
+  "id": "hot-day",
+  "title": "Is it hot?",
+  "instruction": "If the temperature is over 25 degrees, suggest an ice lolly. Either way, finish by wishing the user a great day.",
+  "hint": "Lines that belong to the if are indented underneath it.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "temp = 28"
+    },
+    {
+      "id": "b",
+      "code": "if temp > 25:"
+    },
+    {
+      "id": "c",
+      "code": "print(\"It's a hot day! Grab an ice lolly.\")",
+      "indent": 1
+    },
+    {
+      "id": "d",
+      "code": "print(\"Have a great day!\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "a",
+    "d",
+    "c"
+  ],
+  "expectedOutput": [
+    "It's a hot day! Grab an ice lolly.",
+    "Have a great day!"
+  ]
+}

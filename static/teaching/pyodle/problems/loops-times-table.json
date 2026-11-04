@@ -1,0 +1,52 @@
+{
+  "id": "times-table",
+  "title": "Times table",
+  "instruction": "Print a title, then the 7 times table from 1 × 7 up to 10 × 7. One loop does all ten lines!",
+  "hint": "The number has to be stored before the title can use it.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "number = 7"
+    },
+    {
+      "id": "b",
+      "code": "print(f\"The {number} times table\")"
+    },
+    {
+      "id": "c",
+      "code": "for i in range(1, 11):"
+    },
+    {
+      "id": "d",
+      "code": "print(f\"{i} x {number} = {i * number}\")",
+      "indent": 1
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "d",
+    "a",
+    "c"
+  ],
+  "expectedOutput": [
+    "The 7 times table",
+    "1 x 7 = 7",
+    "2 x 7 = 14",
+    "3 x 7 = 21",
+    "4 x 7 = 28",
+    "5 x 7 = 35",
+    "6 x 7 = 42",
+    "7 x 7 = 49",
+    "8 x 7 = 56",
+    "9 x 7 = 63",
+    "10 x 7 = 70"
+  ]
+}

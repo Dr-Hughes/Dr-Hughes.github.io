@@ -1,0 +1,75 @@
+{
+  "id": "gold-star",
+  "title": "Gold star",
+  "instruction": "Draw a shiny filled star. A 5-pointed star is 5 lines, turning 144 degrees after each one. Wrap the drawing in begin_fill() and end_fill() to colour it in.",
+  "hint": "begin_fill() goes just before the shape starts, end_fill() just after it finishes.",
+  "turtle": true,
+  "blocks": [
+    {
+      "id": "a",
+      "code": "import turtle"
+    },
+    {
+      "id": "b",
+      "code": "t = turtle.Turtle()"
+    },
+    {
+      "id": "c",
+      "code": "t.color(\"orange\", \"gold\")"
+    },
+    {
+      "id": "d",
+      "code": "t.begin_fill()"
+    },
+    {
+      "id": "e",
+      "code": "for point in range(5):"
+    },
+    {
+      "id": "f",
+      "code": "t.forward(200)",
+      "indent": 1
+    },
+    {
+      "id": "g",
+      "code": "t.right(144)",
+      "indent": 1
+    },
+    {
+      "id": "h",
+      "code": "t.end_fill()"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h"
+    ],
+    [
+      "a",
+      "b",
+      "d",
+      "c",
+      "e",
+      "f",
+      "g",
+      "h"
+    ]
+  ],
+  "jumble": [
+    "d",
+    "c",
+    "h",
+    "f",
+    "a",
+    "e",
+    "b",
+    "g"
+  ]
+}

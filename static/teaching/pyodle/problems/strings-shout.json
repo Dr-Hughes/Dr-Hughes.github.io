@@ -1,0 +1,44 @@
+{
+  "id": "shout",
+  "title": "Shout it out",
+  "instruction": "Ask for a name, then cheer it in CAPITALS like a football crowd. After that, whisper it in lowercase.",
+  "hint": ".upper() makes text SHOUTY and .lower() makes it quiet.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "name = input(\"What is your name? \")"
+    },
+    {
+      "id": "b",
+      "code": "loud = name.upper()"
+    },
+    {
+      "id": "c",
+      "code": "print(\"GO \" + loud + \"!\")"
+    },
+    {
+      "id": "d",
+      "code": "print(\"(whispers) go \" + name.lower() + \"...\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "d",
+    "c",
+    "b",
+    "a"
+  ],
+  "stdinDefault": "Sarah",
+  "expectedOutput": [
+    "What is your name? Sarah",
+    "GO SARAH!",
+    "(whispers) go sarah..."
+  ]
+}

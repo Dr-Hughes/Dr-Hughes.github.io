@@ -1,0 +1,54 @@
+{
+  "id": "football-pitch",
+  "title": "Football pitch",
+  "instruction": "A football pitch is 100 m long and 40 m narrower than that. Print its area (length × width) and the distance all the way round it (the perimeter). Work the sums out inside the f-strings!",
+  "hint": "Anything inside {curly brackets} in an f-string is worked out by Python first.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "length = 100"
+    },
+    {
+      "id": "b",
+      "code": "width = length - 40"
+    },
+    {
+      "id": "c",
+      "code": "print(f\"Area: {___} square metres\")",
+      "blanks": [
+        {
+          "answer": "length * width",
+          "hint": "Multiply the two sides"
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "code": "print(f\"Running round it is {___} metres\")",
+      "blanks": [
+        {
+          "answer": "2 * (length + width)",
+          "hint": "Two lengths plus two widths"
+        }
+      ]
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "a",
+    "d",
+    "c"
+  ],
+  "expectedOutput": [
+    "Area: 6000 square metres",
+    "Running round it is 320 metres"
+  ]
+}

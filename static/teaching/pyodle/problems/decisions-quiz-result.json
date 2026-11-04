@@ -1,0 +1,56 @@
+{
+  "id": "quiz-result",
+  "title": "Quiz result",
+  "instruction": "You scored 7 in a quiz. If the score is 5 or more, print that you passed, otherwise print \"Keep practising!\". Then always print \"Quiz over.\".",
+  "hint": "else: catches everything the if didn't.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "score = 7"
+    },
+    {
+      "id": "b",
+      "code": "if score >= 5:"
+    },
+    {
+      "id": "c",
+      "code": "print(\"You passed the quiz!\")",
+      "indent": 1
+    },
+    {
+      "id": "d",
+      "code": "else:"
+    },
+    {
+      "id": "e",
+      "code": "print(\"Keep practising!\")",
+      "indent": 1
+    },
+    {
+      "id": "f",
+      "code": "print(\"Quiz over.\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ]
+  ],
+  "jumble": [
+    "c",
+    "f",
+    "e",
+    "b",
+    "a",
+    "d"
+  ],
+  "expectedOutput": [
+    "You passed the quiz!",
+    "Quiz over."
+  ]
+}

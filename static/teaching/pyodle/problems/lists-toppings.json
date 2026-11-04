@@ -1,0 +1,64 @@
+{
+  "id": "toppings",
+  "title": "Pizza toppings",
+  "instruction": "Tell the customer how many toppings you have, ask which one they'd like, and check whether it's on the list.",
+  "hint": "x in my_list is True if x is somewhere in the list.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "toppings = [\"cheese\", \"tomato\", \"mushroom\", \"pepper\"]"
+    },
+    {
+      "id": "b",
+      "code": "print(f\"We have {len(toppings)} toppings today.\")"
+    },
+    {
+      "id": "c",
+      "code": "choice = input(\"Which topping would you like? \")"
+    },
+    {
+      "id": "d",
+      "code": "if choice in toppings:"
+    },
+    {
+      "id": "e",
+      "code": "print(f\"Yum! Adding {choice} to your pizza.\")",
+      "indent": 1
+    },
+    {
+      "id": "f",
+      "code": "else:"
+    },
+    {
+      "id": "g",
+      "code": "print(f\"Sorry, we have run out of {choice}.\")",
+      "indent": 1
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g"
+    ]
+  ],
+  "jumble": [
+    "f",
+    "a",
+    "d",
+    "c",
+    "b",
+    "g",
+    "e"
+  ],
+  "stdinDefault": "mushroom",
+  "expectedOutput": [
+    "We have 4 toppings today.",
+    "Which topping would you like? mushroom",
+    "Yum! Adding mushroom to your pizza."
+  ]
+}

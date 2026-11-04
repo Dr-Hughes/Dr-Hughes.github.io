@@ -1,0 +1,44 @@
+{
+  "id": "cheer",
+  "title": "Your first function",
+  "instruction": "Define a function called cheer that prints \"Hip hip...\" and then \"HOORAY!\". Then call it to make it run.",
+  "hint": "def only teaches Python the function. Nothing happens until you call cheer().",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "def cheer():"
+    },
+    {
+      "id": "b",
+      "code": "print(\"Hip hip...\")",
+      "indent": 1
+    },
+    {
+      "id": "c",
+      "code": "print(\"HOORAY!\")",
+      "indent": 1
+    },
+    {
+      "id": "d",
+      "code": "cheer()"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "a",
+    "d",
+    "c"
+  ],
+  "expectedOutput": [
+    "Hip hip...",
+    "HOORAY!"
+  ]
+}

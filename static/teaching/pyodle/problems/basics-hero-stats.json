@@ -1,0 +1,61 @@
+{
+  "id": "hero-stats",
+  "title": "Hero stats",
+  "instruction": "Build a game hero! Work out their HP from their level and print it. Then a slime hits them for 25 HP, and after that they eat a cookie that gives back 40 HP. Print the HP after each event.",
+  "hint": "str() turns a number into text so you can join it with +. f-strings let you drop {variables} straight into text.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "level = 3"
+    },
+    {
+      "id": "b",
+      "code": "hp = 50 + level * 10"
+    },
+    {
+      "id": "c",
+      "code": "print(\"Level \" + str(level) + \" hero with \" + str(hp) + \" HP\")"
+    },
+    {
+      "id": "d",
+      "code": "hp = hp - 25"
+    },
+    {
+      "id": "e",
+      "code": "print(f\"Ouch! A slime hit you. HP left: {hp}\")"
+    },
+    {
+      "id": "f",
+      "code": "hp = hp + 40"
+    },
+    {
+      "id": "g",
+      "code": "print(f\"You ate a cookie. HP is now {hp}\")"
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g"
+    ]
+  ],
+  "jumble": [
+    "c",
+    "f",
+    "a",
+    "e",
+    "g",
+    "d",
+    "b"
+  ],
+  "expectedOutput": [
+    "Level 3 hero with 80 HP",
+    "Ouch! A slime hit you. HP left: 55",
+    "You ate a cookie. HP is now 95"
+  ]
+}

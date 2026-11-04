@@ -1,0 +1,53 @@
+{
+  "id": "square",
+  "title": "Draw a square",
+  "instruction": "Tell the turtle to draw a blue square: forward 150 steps, turn left 90 degrees, and do that 4 times.",
+  "hint": "Import turtle and make your turtle first, then pick a colour, then draw.",
+  "turtle": true,
+  "blocks": [
+    {
+      "id": "a",
+      "code": "import turtle"
+    },
+    {
+      "id": "b",
+      "code": "t = turtle.Turtle()"
+    },
+    {
+      "id": "c",
+      "code": "t.color(\"royalblue\")"
+    },
+    {
+      "id": "d",
+      "code": "for side in range(4):"
+    },
+    {
+      "id": "e",
+      "code": "t.forward(150)",
+      "indent": 1
+    },
+    {
+      "id": "f",
+      "code": "t.left(90)",
+      "indent": 1
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ]
+  ],
+  "jumble": [
+    "f",
+    "e",
+    "d",
+    "a",
+    "c",
+    "b"
+  ]
+}

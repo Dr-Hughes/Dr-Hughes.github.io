@@ -17,6 +17,13 @@
       kind: "teacher"
 
 - subject: "Computer Science"
+  level: "KS3"
+  year: "Y7–11"
+  topic: "Python"
+  lesson: "Pyodle: Python Puzzles (Parsons problems, turtle and free code)"
+  html: "/teaching/pyodle/"
+
+- subject: "Computer Science"
   level: "GCSE"
   year: "Y10"
   topic: "Systems Architecture"

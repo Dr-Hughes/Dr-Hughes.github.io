@@ -1,0 +1,58 @@
+{
+  "id": "theme-park",
+  "title": "Theme park ride",
+  "instruction": "The rollercoaster needs riders to be at least 140 cm tall AND at least 10 years old. Ask for both, then let them on or send them to the teacups.",
+  "hint": "and is only True when BOTH sides are True.",
+  "blocks": [
+    {
+      "id": "a",
+      "code": "height = int(input(\"How tall are you in cm? \"))"
+    },
+    {
+      "id": "b",
+      "code": "age = int(input(\"How old are you? \"))"
+    },
+    {
+      "id": "c",
+      "code": "if height >= 140 and age >= 10:"
+    },
+    {
+      "id": "d",
+      "code": "print(\"Strap in and enjoy the rollercoaster!\")",
+      "indent": 1
+    },
+    {
+      "id": "e",
+      "code": "else:"
+    },
+    {
+      "id": "f",
+      "code": "print(\"Sorry, try the teacups instead.\")",
+      "indent": 1
+    }
+  ],
+  "solutions": [
+    [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ]
+  ],
+  "jumble": [
+    "b",
+    "a",
+    "f",
+    "e",
+    "d",
+    "c"
+  ],
+  "stdinDefault": "145\n12",
+  "expectedOutput": [
+    "How tall are you in cm? 145",
+    "How old are you? 12",
+    "Strap in and enjoy the rollercoaster!"
+  ]
+}
